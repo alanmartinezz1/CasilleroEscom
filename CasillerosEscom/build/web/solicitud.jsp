@@ -62,9 +62,9 @@
             
             <form class="needs-validation" action="" method="post" id="form" novalidate>
                 <div class="form-floating mb-3" id="nombre">
-                    <div>
+                    <div class="grupo__pat">
                         <label for="paterno" class="form-label">Apellido Paterno</label>
-                        <input type="text" class="form-control" id="" placeholder="MARTINEZ" required>
+                        <input name="paterno" autocomplete="off" type="text" class="form-control" id="pat" onkeypress="return validarname(event)" placeholder="MARTINEZ" required >
                         
                         <div class="invalid-feedback" id="invalido">
                             Escribe un apellido válido
@@ -72,9 +72,9 @@
                     
                     </div>
                     
-                    <div>
+                    <div class="grupo__mat">
                         <label for="materno" class="form-label">Apellido Materno</label>
-                        <input type="text" class="form-control" id="" placeholder="ZARAGOZA" required>
+                        <input name="materno" autocomplete="off" type="text" class="form-control" id="mat" placeholder="ZARAGOZA" required onkeypress="return validarname(event)">
                     
                         <div class="invalid-feedback">
                             Escribe un apellido válido
@@ -82,9 +82,9 @@
                     
                     </div>
                     
-                    <div>
+                    <div class="grupo__nombre">
                         <label for="nombre" class="form-label">Nombre(s)</label>
-                        <input type="text" class="form-control" id="" placeholder="ALAN GAEL" required>
+                        <input name="nombre" autocomplete="off" type="text" class="form-control" id="nombre" placeholder="ALAN GAEL" required onkeypress="return validarname(event)">
                     
                         <div class="invalid-feedback">
                             Escribe un nombre válido
@@ -94,9 +94,9 @@
                 </div>
                 
                 <div class="mb-3" id="info">
-                    <div>
+                    <div class="grupo__id">
                         <label for="id" class="form-label">Número de Boleta</label>
-                        <input type="text" class="form-control" id="" placeholder="2023630000" required>
+                        <input name="id" autocomplete="off" type="text" class="form-control" id="id" placeholder="2023630000" required onkeypress="return validarn(event)">
                     
                        
                         <div class="invalid-feedback">
@@ -104,9 +104,9 @@
                         </div>
                     
                     </div>
-                    <div>
+                    <div class="grupo__carrera">
                         <label for="carrera" class="form-label">Carrera</label>
-                        <select class="form-select" aria-label="Selecciona tu carrera" required>
+                        <select name="carrera" class="form-select" aria-label="Selecciona tu carrera" required>
                             <option selected disabled value>Selecciona tu carrera</option>
                             <option value="1">ISC</option>
                             <option value="2">LCD</option>
@@ -120,9 +120,9 @@
                     </div>
                     
                     
-                    <div>
+                    <div class="grupo__semestre">
                         <label for="semestre" class="form-label">Semestre</label>
-                        <select class="form-select" aria-label="Selecciona tu semestre" required>
+                        <select name="semestre" class="form-select" aria-label="Selecciona tu semestre" required>
                             <option selected disabled value>Selecciona tu semestre</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -140,9 +140,9 @@
                         
                     </div>
                     
-                    <div>
+                    <div class="grupo__email">
                         <label for="email" class="form-label">Correo electrónico</label>
-                        <input type="email" class="form-control" id="" placeholder="alumno@alumno.ipn.mx" required>
+                        <input name="email" autocomplete="off" type="email" class="form-control" id="correo" placeholder="alumno@alumno.ipn.mx" required onkeypress="return validaremail(event)">
                     
                         <div class="invalid-feedback">
                             Escribe un correo válido
@@ -152,7 +152,10 @@
                     
                 </div>
                 
-                <button type="submit" class="btn btn-primary">ENVIAR</button>
+                <div id="boton">
+                    <button type="submit" class="btn" id="forms">ENVIAR</button>
+                </div>
+                
             </form>
         </div>
         

@@ -3,23 +3,61 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/JavaScript.js to edit this template
  */
 
+    const $email = document.getElementById("correo");
+    const $id = document.getElementById("id");
+    const $submit = document.getElementById("submit");
+
+function validarname(e){
+    var teclado = (document.all)?e.keyCode:e.which;
+    if(teclado == 8)return true;
+
+    var patron = /[A-Z\s]{1,40}/;
+    
+    var prueba = String.fromCharCode(teclado);
+    return patron.test(prueba);
+}
+
+function validarn(e){
+    var teclado = (document.all)?e.keyCode:e.which;
+    if(teclado == 8)return true;
+
+    var patron = /[0-9]/;
+
+    var prueba = String.fromCharCode(teclado);
+    return patron.test(prueba);
+}
+
+    
+
+
+
+document.addEventListener("click", (e) => {
+    if(e.target === $submit){
+        const emailRegex = /^[\w]+@[a-z]+\.ipn\.mx$/;
+        if(!emailRegex.test($email.value)){
+        event.preventDefault();
+        event.stopPropagation();
+    }
+        
+    }
+});
+
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {
-  'use strict'
+  'use strict';
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
+  const forms = document.querySelectorAll('.needs-validation');
 
-  // Loop over them and prevent submission
   Array.from(forms).forEach(form => {
     form.addEventListener('submit', event => {
       if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
+        event.preventDefault();
+        event.stopPropagation();
       }
 
-      form.classList.add('was-validated')
-    }, false)
-  })
-})()
+
+      form.classList.add('was-validated');
+    });
+  });
+})();
