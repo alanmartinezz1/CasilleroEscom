@@ -27,9 +27,6 @@ function validarn(e){
     return patron.test(prueba);
 }
 
-    
-
-
 
 document.addEventListener("click", (e) => {
     if(e.target === $submit){

@@ -173,7 +173,7 @@
                     <h4>D.R. Instituto Politécnico Nacional (IPN). Av. Luis Enrique Erro S/N, Unidad Profesional Adolfo López Mateos, Zacatenco, Delegación Gustavo A. Madero, C.P. 07738, Ciudad de México 2009-2013.</h4>
                     <br>
                     <br>
-                    <h4>Esta página no es oficial, únicamente una réplica de la original con fines no lucrativos, la dirección real es: https://www.escom.ipn.mx/.</h4>
+                    <h4>Esta página no es oficial, es únicamente una réplica de la original con fines no lucrativos, la dirección real es: https://www.escom.ipn.mx/.</h4>
             </div>
         </div>
     </footer>
